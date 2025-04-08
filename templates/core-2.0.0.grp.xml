@@ -34,9 +34,5 @@
       <id>ui-domain</id>
       <version>2.0.0</version>
     </stack>
-    <stack>
-      <id>ui-automation</id>
-      <version>2.0.0</version>
-    </stack>
   </stacks>
 </group>
