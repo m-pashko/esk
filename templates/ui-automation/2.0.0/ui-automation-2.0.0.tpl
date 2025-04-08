@@ -9,7 +9,7 @@
 <@requirement.PARAM name='REACT_APP_REMOTE_URL' value='http://localhost' required='true' description='app root' />
 <@requirement.PARAM name='REACT_APP_TITLE' value='Ростелеком' required='true' description='app logo' />
 
-<@img.TASK 'ui-automation-${namespace}' 'docker.t-rtk-it.ru/repository/image-smart-control/inventory/ui-automation:${PARAMS.TAG}'>
+<@img.TASK 'ui-automation-${namespace}' '172.25.6.189:8123/repository/image-smart-control/inventory/ui-automation:${PARAMS.TAG}'>
   <@img.NODE_REF 'ui-automation' />
   <@img.PORT PARAMS.PUBLISHED_PORT '80' />
   <@img.CHECK_PORT '80' />
