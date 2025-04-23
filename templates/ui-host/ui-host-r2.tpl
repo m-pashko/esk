@@ -4,9 +4,9 @@
 <@requirement.PARAM name='PUBLISHED_PORT' value='7000' required='false' type='port' />
 <@requirement.PARAM name='REMOTE_URLS' value='domain_http://sc-ui-domain-ui:7002, automation_http://sc-ui-automation-ui:7001' required='true'
 <@requirement.PARAM name='API_URL' value='http://sc-gw-directory:8080' required='true' description='api url' />
-<@requirement.PARAM name='KEYCLOACK_SCOPE' value='openid' required='true' description='Scope for OIDC' />
-<@requirement.PARAM name='KEYCLOACK_CLIENT_ID' value='smart-control' required='true' description='Client ID in OIDC Provider' />
-<@requirement.PARAM name='KEYCLOACK_CLIENT_SECRET' value='' required='true' type="password" description='Client secret in OIDC Provider' />
+<@requirement.PARAM name='KEYCLOACK_SCOPE' value='openid' required='false' description='Scope for OIDC' />
+<@requirement.PARAM name='KEYCLOACK_CLIENT_ID' value='smart-control' required='false' description='Client ID in OIDC Provider' />
+<@requirement.PARAM name='KEYCLOACK_CLIENT_SECRET' value='' required='false' type="password" description='Client secret in OIDC Provider' />
 
 <@img.TASK 'sc-ui-host-${namespace}' '172.25.6.89:8123/repository/image-smart-control/microfrontends/ui-host:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-ui-host' />
