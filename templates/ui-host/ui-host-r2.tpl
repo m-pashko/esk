@@ -8,7 +8,7 @@
 <@requirement.PARAM name='KEYCLOACK_CLIENT_ID' value='smart-control' required='true' description='Client ID in OIDC Provider' />
 <@requirement.PARAM name='KEYCLOACK_CLIENT_SECRET' value='' required='true' type="password" description='Client secret in OIDC Provider' />
 
-<@img.TASK 'sc-ui-host-${namespace}' 'registry:5000/repository/image-smart-control/microfrontends/ui-host:${PARAMS.TAG}'>
+<@img.TASK 'sc-ui-host-${namespace}' '172.25.6.89:8123/repository/image-smart-control/microfrontends/ui-host:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-ui-host' />
   <@img.PORT PARAMS.PUBLISHED_PORT '7000' />
   <@img.CHECK_PORT '7000' />
