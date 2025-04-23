@@ -54,7 +54,7 @@
   <@img.ENV 'LOG_LEVEL' PARAMS.LOG_LEVEL />
 </@img.TASK>
 
-<@img.TASK 'sc-sync-${namespace}' 'registry:5000/sync:${PARAMS.TAG_SYNC}'>
+<@img.TASK 'sc-sync-${namespace}' '172.25.6.89:8123/sync:${PARAMS.TAG_SYNC}'>
   <@img.NODE_REF 'sc-dc' />
   <@img.SHARED_VOLUME '/etc/samba' 'vol1-selenga-${namespace}' 'local' />
   <@img.SHARED_VOLUME '/var/lib/samba' 'vol2-selenga-${namespace}' 'local' />
@@ -75,7 +75,7 @@
   <@img.ENV 'MQ_PASS' PARAMS.MQ_PASS />
 </@img.TASK>
 
-<@img.TASK 'sc-unison-client-${namespace}' 'registry:5000/unison-client:${PARAMS.TAG_UNISON_CLIENT}'>
+<@img.TASK 'sc-unison-client-${namespace}' '172.25.6.89:8123/unison-client:${PARAMS.TAG_UNISON_CLIENT}'>
   <@img.NODE_REF 'sc-dc' />
   <@img.SHARED_VOLUME '/data/' 'vol2-selenga-${namespace}' 'local' />
   <@img.VOLUME '/root' 'local' '128' />
