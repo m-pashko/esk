@@ -5,7 +5,7 @@
 <@requirement.PARAM name='PUBLISHED_PORT' required='false' value='11222' type='port' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-cache-${namespace}' 'registry:5000/cache:${PARAMS.TAG}'>
+<@img.TASK 'sc-cache-${namespace}' '172.25.6.89:8123/cache:${PARAMS.TAG}'>
   <@img.PORT PARAMS.PUBLISHED_PORT '11222' />
   <@img.NODE_REF 'sc-cache' />
   <@img.ENV 'USER' PARAMS.CACHE_USER />

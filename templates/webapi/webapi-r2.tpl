@@ -47,7 +47,7 @@
 <@requirement.PARAM name='LDAP_ADMIN_USERNAME' value='cn=Directory Manager' description='Имя администратора' />
 <@requirement.PARAM name='LDAP_ADMIN_PASSWORD' value='' type='password' description='Пароль администратора' />
 
-<@img.TASK 'sc-webapi-${namespace}' 'registry:5000/web:${PARAMS.TAG}'>
+<@img.TASK 'sc-webapi-${namespace}' '172.25.6.89:8123/web:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-webapi' />
   <@img.PORT PARAMS.PUBLISHED_PORT '8082' />
   <@img.PORT PARAMS.JMX_PORT PARAMS.JMX_PORT />

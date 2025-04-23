@@ -29,7 +29,7 @@
 <@requirement.PARAM name='INVENTORY_URL' value='http://sc-cm-dj.sc.lab' required='false' description='URL до бэкенда Inventory' />
 <@requirement.PARAM name='AUTH_MODE' required='false' description='Механизм аутентификации: domain:<domain name> или openid:<openid URL>' />
 
-<@img.TASK 'sc-gw-${namespace}' 'registry:5000/gateway:${PARAMS.TAG}'>
+<@img.TASK 'sc-gw-${namespace}' '172.25.6.89:8123/gateway:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-gw' />
   <@img.PORT PARAMS.GW_PUBLISHED_PORT '8080' />
   <@img.PORT PARAMS.JMX_PORT PARAMS.JMX_PORT />

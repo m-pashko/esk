@@ -20,7 +20,7 @@
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
 
-<@img.TASK 'sc-ds-${namespace}' 'registry:5000/ds:${PARAMS.TAG}'> 
+<@img.TASK 'sc-ds-${namespace}' '172.25.6.89:8123/ds:${PARAMS.TAG}'> 
   <@img.NODE_REF 'sc-ds' />
   <@img.VOLUME '/opt/opendj/data' PARAMS.VIRTUAL_VOLUME?boolean?then('virtual','local') PARAMS.VIRTUAL_VOLUME_SIZE_MB />
   <@img.PORT PARAMS.LDAP_PUBLISHED_PORT PARAMS.LDAP_PUBLISHED_PORT />

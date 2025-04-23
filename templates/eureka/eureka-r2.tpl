@@ -17,7 +17,7 @@
 <@requirement.PARAM name='ROLL_OVER_DAYS' value='1' depends='ES_URL' description='Запускает rollover по истечении максимального времени, прошедшего с момента создания индекса' />
 <@requirement.PARAM name='DELETE_DAYS' value='30' depends='ES_URL' description='Очистка данных мониторинга по истечении заданного количества дней' />
 
-<@img.TASK 'sc-eureka-${namespace}' 'registry:5000/eureka:${PARAMS.TAG}'>
+<@img.TASK 'sc-eureka-${namespace}' '172.25.6.89:8123/eureka:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-eureka' />
   <@img.PORT PARAMS.EUREKA_PUBLISHED_PORT '8761' />
   <@img.PORT PARAMS.JMX_PORT PARAMS.JMX_PORT />
