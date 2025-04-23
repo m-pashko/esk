@@ -5,7 +5,7 @@
 <@requirement.PARAM name='PUBLIC_KEY' type='textarea' required='true' value='' scope='global' description='' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-unison-server-${namespace}' 'registry:5000/unison:${PARAMS.TAG}'>
+<@img.TASK 'sc-unison-server-${namespace}' '172.25.6.89:8123/unison:${PARAMS.TAG}'>
  <@img.NODE_REF 'sc-unison' />
  <@img.ENV 'PUBLIC_KEY' PARAMS.PUBLIC_KEY />
  <@img.VOLUME '/data' PARAMS.VIRTUAL_VOLUME?boolean?then('virtual','local') PARAMS.VIRTUAL_VOLUME_SIZE_MB />
