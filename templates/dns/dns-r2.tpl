@@ -5,7 +5,7 @@
 <@requirement.PARAM name='MONITORING_PORT' required='false' type='port' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-dns-${namespace}' 'registry:5000/dns:${PARAMS.TAG}'>
+<@img.TASK 'sc-dns-${namespace}' '172.25.6.89:8123/dns:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-dns' />
   <@img.ENV 'FORWARD_ZONES' PARAMS.FORWARD_ZONES />
   <@img.ENV 'DNS_ZONE_NAME' PARAMS.DNS_ZONE_NAME />

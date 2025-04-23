@@ -5,7 +5,7 @@
 <@requirement.PARAM name='CTRL_PASS' value='' required='true' type='password' description='Пароль пользователя NTP сервера' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-ntp-${namespace}' 'registry:5000/ntp:${PARAMS.TAG}'>
+<@img.TASK 'sc-ntp-${namespace}' '172.25.6.89:8123/ntp:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-ntp' />
   <@img.ENV 'NTP_SERVER_CONFIG' PARAMS.NTP_SERVER_CONFIG />
   <@img.ENV 'CTRL_USER' PARAMS.CTRL_USER />

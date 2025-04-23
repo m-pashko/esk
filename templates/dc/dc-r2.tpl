@@ -34,7 +34,7 @@
 <@requirement.PARAM name='TAG_UNISON_CLIENT' value='' type='tag' />
 <@requirement.PARAM name='LOG_LEVEL' value='3 passdb:5 auth:10 winbind:2' />
 
-<@img.TASK 'sc-dc-${namespace}' 'registry:5000/dc-launcher:${PARAMS.TAG_DC_LAUNCHER}'>
+<@img.TASK 'sc-dc-${namespace}' '172.25.6.89:8123/dc-launcher:${PARAMS.TAG_DC_LAUNCHER}'>
   <@img.NODE_REF 'sc-dc' />
   <@img.VOLUME '/mnt' 'local' 1 />
   <@img.ENV 'SELENGA_DC_PW' PARAMS.SELENGA_DC_PW />

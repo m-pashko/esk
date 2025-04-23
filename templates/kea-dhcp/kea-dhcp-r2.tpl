@@ -6,7 +6,7 @@
 <@requirement.PARAM name='REGISTRY_PWD' required='false' value='' type='' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-kea-dhcp-${namespace}' 'registry:5000/kea-dhcp-launcher:${PARAMS.TAG}'>
+<@img.TASK 'sc-kea-dhcp-${namespace}' '172.25.6.89:8123/kea-dhcp-launcher:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-kea-dhcp' />
   <@img.ENV 'CTRL_PUBLISHED_PORT' PARAMS.CTRL_PUBLISHED_PORT />
   <@img.ENV 'REGISTRY' PARAMS.REGISTRY />
