@@ -2,7 +2,7 @@
 
 <@requirement.PARAM name='TAG' type='tag' value='' />
 <@requirement.PARAM name='PUBLISHED_PORT' value='7000' required='false' type='port' />
-<@requirement.PARAM name='REMOTE_URLS' value='domain_http://sc-ui-domain-ui:7002, automation_http://sc-ui-automation-ui:7001' required='true'
+<@requirement.PARAM name='REMOTE_URLS' value='domain_http://sc-ui-domain-ui:7002, automation_http://sc-ui-automation-ui:7001' required='true' />
 <@requirement.PARAM name='API_URL' value='http://sc-gw-directory:8080' required='true' description='api url' />
 <@requirement.PARAM name='KEYCLOACK_SCOPE' value='openid' required='false' description='Scope for OIDC' />
 <@requirement.PARAM name='KEYCLOACK_CLIENT_ID' value='smart-control' required='false' description='Client ID in OIDC Provider' />
