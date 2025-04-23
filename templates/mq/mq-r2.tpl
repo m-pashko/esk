@@ -11,7 +11,7 @@
 <@requirement.PARAM name='LOG_LEVEL' value='warning' required='false' type='select' values='debug,info,warning,error,critical,none' />
 <@requirement.PARAM name='TAG' value='' type='tag' />
 
-<@img.TASK 'sc-mq-${namespace}' 'registry:5000/mq:${PARAMS.TAG}'>
+<@img.TASK 'sc-mq-${namespace}' '172.25.6.89:8123/mq:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-mq' />
   <@img.VOLUME '/var/lib/rabbitmq' PARAMS.VIRTUAL_VOLUME?boolean?then('virtual','local') PARAMS.VIRTUAL_VOLUME_SIZE_MB />
   <@img.ENV 'RABBITMQ_DEFAULT_USER' PARAMS.MQ_DEFAULT_USER />
