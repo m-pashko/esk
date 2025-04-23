@@ -5,7 +5,7 @@
 <@requirement.PARAM name='MONITORING_PORT' value='19108' required='false' type='port' />
 <@requirement.PARAM name='PUBLIC_URL' value='/domain' required='true' description='http://localhost:7002/' />
 
-<@img.TASK 'sc-ui-domain-${namespace}' '172.25.6.89:8123/repository/image-smart-control/microfrontends/ui-domain:${PARAMS.TAG}'>
+<@img.TASK 'sc-ui-domain-${namespace}' '172.25.6.89:8123/ui-domain:${PARAMS.TAG}'>
   <@img.NODE_REF 'sc-ui-domain' />
   <@img.PORT PARAMS.PUBLISHED_PORT '7002' />
   <@img.PORT PARAMS.MONITORING_PORT '19108' />
